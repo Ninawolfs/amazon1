@@ -7,7 +7,12 @@ import { useStateValue } from "./StateProvider";
 
 function Header() {
   const [{ basket }] = useStateValue();
-  console.log(basket);
+
+  // const login = ()=>{
+  //   if (user) {
+  //    auth.signOut()
+  //   }
+  // };
 
   return (
     <nav className="header">

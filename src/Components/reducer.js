@@ -1,22 +1,5 @@
 export const initialState = {
-  basket: [
-    {
-      id: "12321342",
-      title: "King of Battle and Blood",
-      price: 23.52,
-      rating: 4,
-      image:
-        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617457059i/56651967.jpg",
-    },
-    {
-      id: "12321342",
-      title: "King of Battle and Blood",
-      price: 23.52,
-      rating: 4,
-      image:
-        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617457059i/56651967.jpg",
-    },
-  ],
+  basket: [],
   user: null,
 };
 
@@ -27,6 +10,11 @@ const reducer = (state, action) => {
   console.log(action);
 
   switch (action.type) {
+    case "SET_USER":
+      return {
+        ...state,
+      user: action.user,
+      }
     case "ADD_TO_BASKET":
       // logic for adding item to basket
       return {
